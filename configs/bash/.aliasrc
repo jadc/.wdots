@@ -1,0 +1,34 @@
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+
+# shortcuts
+alias \
+	v='$EDITOR' \
+	py='python3' \
+	yt='yt-dlp' \
+	ig='instaloader --login=majideyes' \
+
+# flags
+alias \
+	du='du -h' \
+	cp='cp -ivp' \
+	mv='mv -iv' \
+	mkdir='mkdir -pv' \
+	make='make -j$(nproc)' \
+	ffmpeg='ffmpeg -hide_banner' \
+	ffprobe='ffprobe -hide_banner' \
+
+## colors
+alias \
+	ls="ls -hN --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+	fgrep='fgrep --color=auto' \
+	egrep='egrep --color=auto' \
+	diff="diff --color=auto"
+
+## long
+alias \
+	7zs='7z a -t7z -mx=9 -mfb=273 -ms -md=31 -myx=9 -mtm=- -mmt -mmtf -md=1536m -mmf=bt3 -mmc=10000 -mpb=0 -mlc=0' \
+	cl="curl -F 'clbin=<-' https://clbin.com" \
+	gp='git add . && git commit -m "$(date +%Y-%m-%d_%H:%M:%S)" && git push' \
+	wavtoflac='flac --best --delete-input-file -e -p -V -f --keep-foreign-metadata *.wav' \
+	sharedir='python -m http.server 25566'
