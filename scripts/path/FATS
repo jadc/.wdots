@@ -1,0 +1,18 @@
+#!/bin/sh
+# FAST ASS TEXT SEARCH
+#YANKER=xclip
+YANKER=win32yank.exe
+
+# config
+POLL=0.25
+LINES_BEFORE=6
+LINES_AFTER=16
+
+cd "$1"
+
+OLD="$($YANKER -o)"
+while true; do
+    sleep $POLL
+    NEW="$($YANKER -o)"
+    [ "$OLD" != "$NEW" ] && OLD=$NEW && tput reset && grep --color=auto -Firh -B $LINES_BEFORE -A $LINES_AFTER "$NEW" .
+done
