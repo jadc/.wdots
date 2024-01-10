@@ -58,16 +58,16 @@ nnoremap $ g$
 nnoremap 0 g0
 
 " vim plug
-call plug#begin()
-
-Plug 'lervag/vimtex'
-
-call plug#end()
+"call plug#begin()
+"
+"Plug 'lervag/vimtex'
+"
+"call plug#end()
 
 " vim tex
-filetype plugin indent on
-syntax enable
-let g:vimtex_compiler_latexmk = {'executable' : 'latexmk.exe'}
+"filetype plugin indent on
+"syntax enable
+"let g:vimtex_compiler_latexmk = {'executable' : 'latexmk.exe'}
 "let g:vimtex_quickfix_mode=0
 "let g:vimtex_view_general_viewer = 'sioyek'
 "let g:vimtex_view_general_options = '-reuse-instance @pdf'
